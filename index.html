@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Gaming Quick Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 25%, #48dbfb 50%, #ff9ff3 75%, #54a0ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        /* Game Logo Section */
+        .game-logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
+            border: 5px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .game-logo:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+        }
+
+        .game-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-title {
+            color: white;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+            gap: 25px;
+            max-width: 400px;
+            margin: 0 auto 50px;
+        }
+
+        .link-item {
+            aspect-ratio: 2;
+            border-radius: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 11px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            border: 4px solid rgba(255,255,255,0.25);
+        }
+
+        .link-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .link-item:hover::before {
+            left: 100%;
+        }
+
+        .link-item:hover {
+            transform: translateY(-15px) scale(1.08);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .link-item:active {
+            transform: scale(0.95);
+        }
+
+        /* Gaming Colors */
+        .BDG { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .BDG WIN { background: linear-gradient(135deg, #ff4444, #cc0000); }
+        .BDG GAME { background: linear-gradient(135deg, #00d4ff, #0099cc); }
+        .IN 777{ background: linear-gradient(135deg, #ff6b35, #f7931e); }
+        .IN 7{ background: linear-gradient(135deg, #ff4655, #d90429); }
+        .UPI APP { background: linear-gradient(135deg, #56ab2f, #a8e6cf); }
+        .UPI APP{ background: linear-gradient(135deg, #00b7eb, #0083b0); }
+        .UPI APP{ background: linear-gradient(135deg, #41b883, #2d9e68); }
+
+        .link-icon {
+            font-size: 32px;
+            margin-bottom: 2px;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+        }
+
+        .link-text {
+            font-size: 10px;
+            letter-spacing: 0.8px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .links-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            
+            .main-title {
+                font-size: 26px;
+            }
+            
+            .game-logo {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Game Logo -->
+        <div class="game-logo">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=400&fit=crop&crop=center" alt="Gaming Logo">
+        </div>
+
+        <h1 class="main-title">🎮 Gaming Hub</h1>
+        <p class="subtitle">Quick Access to Your Favorite Games</p>
+        
+        <div class="links-grid" id="linksGrid">
+            <!-- Links automatically generate honge -->
+        </div>
+    </div>
+
+    <script>
+        // Gaming links with icons (Fixed - No add option)
+        const links = [
+            { name: "BIG DADDY", url: "https://bdg7.vip//#/register?invitationCode=2644620280289", icon: "🚀💰🚀", class: "pubg" },
+            { name: "BDG WIN GAME", url: "https://bdgwin4.vip//#/register?invitationCode=3346413951620", icon: "🚀💰🚀", class: "freefire" },
+            { name: "BDG GAME", url: "https://bdg7.vip//#/register?invitationCode=2644620280289", icon: "🚀💰🚀", class: "bgmi" },
+            { name: "IN 777 GAME", url: " https://share.in7game.org/share/agent/AD63NNAB?data=eyJtIjoyLCJsYW5nIjoiZW4iLCJpZCI6MX0=", icon: "🎖️", class: "cod" },
+            { name: "IN7 GAME", url: " https://share.in7game.org/share/agent/AD63NNAB?data=eyJtIjoyLCJsYW5nIjoiZW4iLCJpZCI6MX0=", icon: "⚡", class: "valorant" },
+            { name: "UPI APP", url: "https://r.navi.com/16yWgB", icon: "🆙️", class: "minecraft" },
+            { name: "UPI APP", url: "https://r.navi.com/16yWgB", icon: "🆙", class: "roblox" },
+            { name: "UPI APP", url: "https://phon.pe/wzp524y8", icon: "🆙️", class: "fortnite" }
+        ];
+
+        // Page load par links show karo
+        window.onload = function() {
+            displayLinks();
+        };
+
+        function displayLinks() {
+            const grid = document.getElementById('linksGrid');
+            grid.innerHTML = '';
+
+            links.forEach(link => {
+                const div = document.createElement('a');
+                div.href = link.url;
+                div.target = "_blank";
+                div.className = `link-item ${link.class}`;
+                div.innerHTML = `
+                    <div class="link-icon">${link.icon}</div>
+                    <div class="link-text">${link.name}</div>
+                `;
+                grid.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
